@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# macOS install for all users
+cp tree /usr/local/bin/tree; chmod 755 /usr/local/bin/tree

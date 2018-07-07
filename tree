@@ -1,0 +1,14 @@
+#!/bin/sh
+
+
+TREE='s;[^/]*/;|____;g;s;____|; |;g'
+
+if [ "$#" -gt 0 ] ; then
+   folder="$#"
+else
+   folder="."
+fi
+
+for x in $folder; do
+       find "$x" -print | sed -e "$TREE"
+done
